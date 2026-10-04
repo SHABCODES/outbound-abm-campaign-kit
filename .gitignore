@@ -2,5 +2,7 @@ __pycache__/
 .pytest_cache/
 out/
 data/raw/*real*
+# Raw imports can contain real contact data; existing synthetic samples remain tracked.
+data/raw/*.csv
 data/results.csv
 .env
