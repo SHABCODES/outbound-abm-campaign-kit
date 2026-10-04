@@ -1,0 +1,15 @@
+{
+  "offer": "support_triage",
+  "send_on_days": [
+    0,
+    3,
+    7,
+    12
+  ],
+  "rules": [
+    "stop sequence on any reply",
+    "send Tue to Thu, 8 to 11 am recipient time",
+    "no tracking links or images in touch 1",
+    "include unsubscribe line and business address"
+  ]
+}

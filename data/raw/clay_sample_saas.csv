@@ -1,0 +1,4 @@
+company_name,domain,industry,employee_count,country,tech,full_name,job_title,work_email,linkedin,signals
+Northwind Example SaaS,northwind-example.test,SaaS,130,United States,"Zendesk",Dana Reyes,Head of Support,dana@northwind-example.test,https://linkedin.example/dana,"customer support agent opening"
+Lumen Example Cloud,lumen-example.test,Cloud,450,Canada,"Freshdesk;Segment",Priya Nair,Director of Support,priya.nair@lumen-example.test,,Series A
+Harbor Example Software,harbor-example.test,Software,210,Netherlands,"Zendesk",Jonas de Vries,Support Operations Lead,,,

@@ -1,0 +1,115 @@
+name: predictive_maintenance
+label: "Predictive maintenance pilot for mid-size manufacturers"
+sender_name: "{{sender_name}}"
+pilot: "Send me an export from one asset class and I show you which failures the model would have flagged, and how early. I have tested the approach on NASA's public turbofan engine data."
+
+icp:
+  industries: ["manufacturing", "industrial", "automotive", "food processing", "packaging", "metal", "chemicals"]
+  employees: {min: 100, max: 3000}
+  countries: ["united states", "united kingdom", "germany", "india", "canada", "mexico"]
+  titles:
+    - {match: "maintenance manager", weight: 25}
+    - {match: "plant manager", weight: 25}
+    - {match: "head of maintenance", weight: 25}
+    - {match: "vp operations", weight: 22}
+    - {match: "reliability engineer", weight: 20}
+    - {match: "operations manager", weight: 15}
+  signals:
+    historian_or_scada: 12
+    hiring_maintenance: 8
+    line_expansion: 5
+
+signal_rules:
+  historian_or_scada: ["scada", "osisoft", "pi system", "ignition", "historian", "aveva"]
+  hiring_maintenance: ["maintenance technician", "reliability engineer opening", "hiring maintenance"]
+  line_expansion: ["new line", "new plant", "expansion", "new facility"]
+
+default_angle: downtime_cost
+angles:
+  data_unused:
+    trigger_signal: historian_or_scada
+    why: "Plants with a historian or SCADA already collect the sensor data. The gap is turning it into early warnings."
+    signal_line: "{{company}} already collects sensor data through {{historian_or_scada_name}}."
+    subjects: ["sensor data at {{company}}", "using the data you already collect"]
+    touches:
+      - day: 0
+        body: |
+          Hi {{first_name}},
+
+          {{signal_line}} Most plants only look at that data after something fails. The same readings usually show drift days or weeks earlier.
+
+          I build predictive maintenance models for rotating equipment. {{pilot}}
+
+          Worth testing on one line?
+
+          {{sender_name}}
+      - day: 3
+        body: |
+          {{first_name}}, following up. The pilot needs one asset class and a few months of sensor and failure history. Should I send a short list of what to export?
+          {{sender_name}}
+      - day: 7
+        body: |
+          A thought, {{first_name}}: the first output is not a dashboard, it is a ranked list of assets that look unhealthy right now. That is usually enough to judge if the approach is worth continuing.
+          {{sender_name}}
+      - day: 12
+        body: |
+          I will step back here, {{first_name}}. If unplanned stops at {{company}} become a priority, the pilot offer stays open.
+          {{sender_name}}
+  hiring_gap:
+    trigger_signal: hiring_maintenance
+    why: "Maintenance hiring is slow and scarce. Early warnings let a smaller team plan work instead of reacting."
+    signal_line: "I noticed {{company}} is hiring on the maintenance side."
+    subjects: ["maintenance hiring at {{company}}", "stretching the maintenance team"]
+    touches:
+      - day: 0
+        body: |
+          Hi {{first_name}},
+
+          {{signal_line}} Good maintenance people are hard to find, so it helps if the team you have spends less time on surprise breakdowns.
+
+          I build models that flag equipment likely to fail so repairs can be planned. {{pilot}}
+
+          Would that help at {{company}}?
+
+          {{sender_name}}
+      - day: 3
+        body: |
+          {{first_name}}, short follow up. If maintenance planning sits with someone else at {{company}}, tell me who and I will reach out to them instead.
+          {{sender_name}}
+      - day: 7
+        body: |
+          {{first_name}}, the pilot is deliberately small: one asset class, one report, no system integration. Want me to scope it?
+          {{sender_name}}
+      - day: 12
+        body: |
+          Final note, {{first_name}}. Happy to revisit whenever the maintenance backlog becomes a bigger concern.
+          {{sender_name}}
+  downtime_cost:
+    trigger_signal: line_expansion
+    why: "New lines raise the cost of every unplanned stop, and there is no history yet, so early monitoring matters."
+    signal_line: "Saw the expansion news at {{company}}."
+    subjects: ["unplanned stops on the new line", "{{company}} expansion and downtime"]
+    touches:
+      - day: 0
+        body: |
+          Hi {{first_name}},
+
+          {{signal_line}} New lines carry the most risk early on, when there is little failure history to learn from and a single unplanned stop is expensive.
+
+          I build predictive maintenance models that start flagging abnormal equipment behaviour as data comes in. {{pilot}}
+
+          Interested in a test?
+
+          {{sender_name}}
+      - day: 3
+        body: |
+          {{first_name}}, bumping this in case it got lost. A quick reply with the right person for maintenance analytics is all I need.
+          {{sender_name}}
+      - day: 7
+        body: |
+          {{first_name}}, one more angle: even before failures happen, the model can show which machines run outside their normal range. That is useful during ramp up.
+          {{sender_name}}
+      - day: 12
+        body: |
+          I will close this out, {{first_name}}. Best of luck with the expansion at {{company}}.
+          {{sender_name}}

@@ -1,0 +1,49 @@
+email,first_name,last_name,company,title,domain,angle,score,why_this_account,subject_1,body_1,subject_2,body_2,subject_3,body_3,subject_4,body_4
+dana@northwind-example.test,Dana,Reyes,Northwind Example SaaS,Head of Support,northwind-example.test,hiring_first,100,industry fit (SaaS); ~120 employees; buyer title (Head of Support); signal: hiring_support; signal: helpdesk_tool,support hiring at northwind example saas,"Hi Dana,
+
+Saw Northwind Example SaaS is hiring on the support side. Before adding headcount, it can be worth checking how many tickets reach the wrong person first. Tickets that land with the wrong person get reassigned, and each hand-off costs a reply cycle.
+
+I build ticket triage that classifies, prioritises and routes on arrival. I run it on a sample of your last 200 tickets and show you the routing accuracy. No cost, no integration.
+
+Worth a look?
+
+Shabda",re: support hiring at northwind example saas,"Dana, a quick follow up. The sample run takes me about a day and you get the accuracy numbers either way. Should I send over what I would need?
+Shabda",re: support hiring at northwind example saas,"Different angle, Dana: if routing is not your bottleneck, the same classifier can tag ticket themes so product gets a weekly view of what customers keep hitting. Useful for Northwind Example SaaS?
+Shabda",re: support hiring at northwind example saas,"I will leave it here, Dana. If ticket routing becomes a priority at Northwind Example SaaS, the offer to test on 200 tickets stands.
+Shabda"
+omar.haddad@brightpath-example.test,Omar,Haddad,Brightpath Example,VP Customer Success,brightpath-example.test,tool_pain,93,industry fit (Software); ~140 employees; buyer title (VP Customer Success); signal: helpdesk_tool; signal: recent_funding,tickets landing in the wrong queue,"Hi Omar,
+
+Brightpath Example runs its support desk on Intercom. The routing rules inside those tools tend to handle the obvious cases and miss the rest, so someone ends up reading and reassigning tickets by hand.
+
+I build a triage layer that sits in front of the helpdesk and reads each ticket for category, urgency and the right owner. I run it on a sample of your last 200 tickets and show you the routing accuracy. No cost, no integration.
+
+Open to it?
+
+Shabda",re: tickets landing in the wrong queue,"Omar, following up in case this got buried. I only need a CSV export of recent tickets to run the test. Want me to send the exact columns?
+Shabda",re: tickets landing in the wrong queue,"One more thought, Omar. Urgent tickets that sit in a general queue are the ones that turn into escalations. The pilot reports how many of yours would have been flagged earlier.
+Shabda",re: tickets landing in the wrong queue,"Closing the loop, Omar. If this is not a fit for Brightpath Example right now, no problem at all.
+Shabda"
+priya.nair@lumen-example.test,Priya,Nair,Lumen Example Cloud,Director of Support,lumen-example.test,tool_pain,93,industry fit (Cloud Computing); ~450 employees; buyer title (Director of Support); signal: helpdesk_tool; signal: recent_funding,tickets landing in the wrong queue,"Hi Priya,
+
+Lumen Example Cloud runs its support desk on Freshdesk. The routing rules inside those tools tend to handle the obvious cases and miss the rest, so someone ends up reading and reassigning tickets by hand.
+
+I build a triage layer that sits in front of the helpdesk and reads each ticket for category, urgency and the right owner. I run it on a sample of your last 200 tickets and show you the routing accuracy. No cost, no integration.
+
+Open to it?
+
+Shabda",re: tickets landing in the wrong queue,"Priya, following up in case this got buried. I only need a CSV export of recent tickets to run the test. Want me to send the exact columns?
+Shabda",re: tickets landing in the wrong queue,"One more thought, Priya. Urgent tickets that sit in a general queue are the ones that turn into escalations. The pilot reports how many of yours would have been flagged earlier.
+Shabda",re: tickets landing in the wrong queue,"Closing the loop, Priya. If this is not a fit for Lumen Example Cloud right now, no problem at all.
+Shabda"
+lee@tallgrass-example.test,Lee,Carter,Tallgrass Example Fintech,Customer Support Manager,tallgrass-example.test,tool_pain,83,industry fit (Fintech); ~60 employees; buyer title (Customer Support Manager); signal: helpdesk_tool; signal: recent_funding,tickets landing in the wrong queue,"Hi Lee,
+
+Tallgrass Example Fintech runs its support desk on Help Scout. The routing rules inside those tools tend to handle the obvious cases and miss the rest, so someone ends up reading and reassigning tickets by hand.
+
+I build a triage layer that sits in front of the helpdesk and reads each ticket for category, urgency and the right owner. I run it on a sample of your last 200 tickets and show you the routing accuracy. No cost, no integration.
+
+Open to it?
+
+Shabda",re: tickets landing in the wrong queue,"Lee, following up in case this got buried. I only need a CSV export of recent tickets to run the test. Want me to send the exact columns?
+Shabda",re: tickets landing in the wrong queue,"One more thought, Lee. Urgent tickets that sit in a general queue are the ones that turn into escalations. The pilot reports how many of yours would have been flagged earlier.
+Shabda",re: tickets landing in the wrong queue,"Closing the loop, Lee. If this is not a fit for Tallgrass Example Fintech right now, no problem at all.
+Shabda"

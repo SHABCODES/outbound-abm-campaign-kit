@@ -1,0 +1,37 @@
+email,first_name,last_name,company,title,domain,angle,score,why_this_account,subject_1,body_1,subject_2,body_2,subject_3,body_3,subject_4,body_4
+tom.ellis@greenfield-example.test,Tom,Ellis,Greenfield Example Foods,Plant Manager,greenfield-example.test,data_unused,97,industry fit (Food Processing); ~400 employees; buyer title (Plant Manager); signal: historian_or_scada; signal: line_expansion,sensor data at greenfield example foods,"Hi Tom,
+
+Greenfield Example Foods already collects sensor data through Scada. Most plants only look at that data after something fails. The same readings usually show drift days or weeks earlier.
+
+I build predictive maintenance models for rotating equipment. Send me an export from one asset class and I show you which failures the model would have flagged, and how early. I have tested the approach on NASA's public turbofan engine data.
+
+Worth testing on one line?
+
+Shabda",re: sensor data at greenfield example foods,"Tom, following up. The pilot needs one asset class and a few months of sensor and failure history. Should I send a short list of what to export?
+Shabda",re: sensor data at greenfield example foods,"A thought, Tom: the first output is not a dashboard, it is a ranked list of assets that look unhealthy right now. That is usually enough to judge if the approach is worth continuing.
+Shabda",re: sensor data at greenfield example foods,"I will step back here, Tom. If unplanned stops at Greenfield Example Foods become a priority, the pilot offer stays open.
+Shabda"
+karen.boyd@steelbrook-example.test,Karen,Boyd,Steelbrook Example Metals,Maintenance Manager,steelbrook-example.test,data_unused,92,industry fit (Metal Manufacturing); ~850 employees; buyer title (Maintenance Manager); signal: historian_or_scada,sensor data at steelbrook example metals,"Hi Karen,
+
+Steelbrook Example Metals already collects sensor data through Osisoft. Most plants only look at that data after something fails. The same readings usually show drift days or weeks earlier.
+
+I build predictive maintenance models for rotating equipment. Send me an export from one asset class and I show you which failures the model would have flagged, and how early. I have tested the approach on NASA's public turbofan engine data.
+
+Worth testing on one line?
+
+Shabda",re: sensor data at steelbrook example metals,"Karen, following up. The pilot needs one asset class and a few months of sensor and failure history. Should I send a short list of what to export?
+Shabda",re: sensor data at steelbrook example metals,"A thought, Karen: the first output is not a dashboard, it is a ranked list of assets that look unhealthy right now. That is usually enough to judge if the approach is worth continuing.
+Shabda",re: sensor data at steelbrook example metals,"I will step back here, Karen. If unplanned stops at Steelbrook Example Metals become a priority, the pilot offer stays open.
+Shabda"
+anna.keller@zephyr-example.test,Anna,Keller,Zephyr Example Auto,Reliability Engineer,zephyr-example.test,data_unused,87,industry fit (Automotive); ~1800 employees; buyer title (Reliability Engineer); signal: historian_or_scada,sensor data at zephyr example auto,"Hi Anna,
+
+Zephyr Example Auto already collects sensor data through Historian. Most plants only look at that data after something fails. The same readings usually show drift days or weeks earlier.
+
+I build predictive maintenance models for rotating equipment. Send me an export from one asset class and I show you which failures the model would have flagged, and how early. I have tested the approach on NASA's public turbofan engine data.
+
+Worth testing on one line?
+
+Shabda",re: sensor data at zephyr example auto,"Anna, following up. The pilot needs one asset class and a few months of sensor and failure history. Should I send a short list of what to export?
+Shabda",re: sensor data at zephyr example auto,"A thought, Anna: the first output is not a dashboard, it is a ranked list of assets that look unhealthy right now. That is usually enough to judge if the approach is worth continuing.
+Shabda",re: sensor data at zephyr example auto,"I will step back here, Anna. If unplanned stops at Zephyr Example Auto become a priority, the pilot offer stays open.
+Shabda"

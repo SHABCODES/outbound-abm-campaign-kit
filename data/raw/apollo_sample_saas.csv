@@ -1,0 +1,7 @@
+Company,Website,Industry,# Employees,Country,Technologies,Full Name,Title,Email,Person Linkedin Url,Keywords
+Northwind Example SaaS,https://www.northwind-example.test,SaaS,120,United States,"Zendesk;Salesforce",Dana Reyes,Head of Support,dana@northwind-example.test,,hiring support agents
+Brightpath Example,brightpath-example.test,Software,80-200,United Kingdom,"Intercom;HubSpot",Omar Haddad,VP Customer Success,omar.haddad@brightpath-example.test,,Series B
+Lumen Example Cloud,lumen-example.test,Cloud Computing,450,Canada,"Freshdesk",Priya Nair,Director of Support,,,
+Tallgrass Example Fintech,tallgrass-example.test,Fintech,60,Ireland,"Help Scout",Lee Carter,Customer Support Manager,lee@tallgrass-example.test,,raised
+Oakline Example Retail,oakline-example.test,Retail,900,United States,"Shopify",Sam Ortiz,Head of Support,sam@oakline-example.test,,
+Pixelforge Example,pixelforge-example.test,DevTools,35,Germany,"Zendesk",Mia Fischer,Head of Customer Experience,info@pixelforge-example.test,,

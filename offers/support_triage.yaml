@@ -1,0 +1,115 @@
+name: support_triage
+label: "AI ticket triage for B2B SaaS support teams"
+sender_name: "{{sender_name}}"
+pilot: "I run it on a sample of your last 200 tickets and show you the routing accuracy. No cost, no integration."
+
+icp:
+  industries: ["saas", "software", "cloud", "fintech", "devtools"]
+  employees: {min: 40, max: 600}
+  countries: ["united states", "united kingdom", "canada", "germany", "netherlands", "ireland", "australia"]
+  titles:
+    - {match: "head of support", weight: 25}
+    - {match: "vp customer", weight: 25}
+    - {match: "director of support", weight: 25}
+    - {match: "head of customer", weight: 22}
+    - {match: "support operations", weight: 22}
+    - {match: "customer support manager", weight: 15}
+  signals:
+    hiring_support: 12
+    helpdesk_tool: 8
+    recent_funding: 5
+
+signal_rules:
+  hiring_support: ["hiring support", "support engineer opening", "customer support agent", "support specialist role"]
+  helpdesk_tool: ["zendesk", "intercom", "freshdesk", "help scout", "front"]
+  recent_funding: ["series a", "series b", "raised"]
+
+default_angle: tool_pain
+angles:
+  hiring_first:
+    trigger_signal: hiring_support
+    why: "A support hire is the clearest sign ticket volume has outgrown the team. Routing is the cheaper fix to test first."
+    signal_line: "Saw {{company}} is hiring on the support side."
+    subjects: ["support hiring at {{company}}", "before the next support hire"]
+    touches:
+      - day: 0
+        body: |
+          Hi {{first_name}},
+
+          {{signal_line}} Before adding headcount, it can be worth checking how many tickets reach the wrong person first. Tickets that land with the wrong person get reassigned, and each hand-off costs a reply cycle.
+
+          I build ticket triage that classifies, prioritises and routes on arrival. {{pilot}}
+
+          Worth a look?
+
+          {{sender_name}}
+      - day: 3
+        body: |
+          {{first_name}}, a quick follow up. The sample run takes me about a day and you get the accuracy numbers either way. Should I send over what I would need?
+          {{sender_name}}
+      - day: 7
+        body: |
+          Different angle, {{first_name}}: if routing is not your bottleneck, the same classifier can tag ticket themes so product gets a weekly view of what customers keep hitting. Useful for {{company}}?
+          {{sender_name}}
+      - day: 12
+        body: |
+          I will leave it here, {{first_name}}. If ticket routing becomes a priority at {{company}}, the offer to test on 200 tickets stands.
+          {{sender_name}}
+  tool_pain:
+    trigger_signal: helpdesk_tool
+    why: "Teams on an off-the-shelf helpdesk usually rely on manual triage or keyword rules that break as volume grows."
+    signal_line: "{{company}} runs its support desk on {{helpdesk_tool_name}}."
+    subjects: ["tickets landing in the wrong queue", "{{helpdesk_tool_name}} routing at {{company}}"]
+    touches:
+      - day: 0
+        body: |
+          Hi {{first_name}},
+
+          {{signal_line}} The routing rules inside those tools tend to handle the obvious cases and miss the rest, so someone ends up reading and reassigning tickets by hand.
+
+          I build a triage layer that sits in front of the helpdesk and reads each ticket for category, urgency and the right owner. {{pilot}}
+
+          Open to it?
+
+          {{sender_name}}
+      - day: 3
+        body: |
+          {{first_name}}, following up in case this got buried. I only need a CSV export of recent tickets to run the test. Want me to send the exact columns?
+          {{sender_name}}
+      - day: 7
+        body: |
+          One more thought, {{first_name}}. Urgent tickets that sit in a general queue are the ones that turn into escalations. The pilot reports how many of yours would have been flagged earlier.
+          {{sender_name}}
+      - day: 12
+        body: |
+          Closing the loop, {{first_name}}. If this is not a fit for {{company}} right now, no problem at all.
+          {{sender_name}}
+  growth_scaling:
+    trigger_signal: recent_funding
+    why: "Post-funding teams grow volume faster than headcount, so triage debt shows up quickly."
+    signal_line: "Congrats on the recent funding at {{company}}."
+    subjects: ["scaling support after the raise", "support volume at {{company}}"]
+    touches:
+      - day: 0
+        body: |
+          Hi {{first_name}},
+
+          {{signal_line}} Funding usually brings a jump in customers, and ticket volume tends to rise faster than the support team can.
+
+          I build ticket triage that routes and prioritises on arrival, so the existing team handles more without losing the urgent ones. {{pilot}}
+
+          Would that be useful at {{company}}?
+
+          {{sender_name}}
+      - day: 3
+        body: |
+          {{first_name}}, bumping this once. If someone else owns support tooling at {{company}}, point me their way and I will stop here.
+          {{sender_name}}
+      - day: 7
+        body: |
+          {{first_name}}, the test is small on purpose: 200 tickets, one day, a plain accuracy report. Should I set it up?
+          {{sender_name}}
+      - day: 12
+        body: |
+          Last note from me, {{first_name}}. Happy to pick this up whenever support volume becomes a pressure point.
+          {{sender_name}}

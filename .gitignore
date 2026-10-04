@@ -1,0 +1,6 @@
+__pycache__/
+.pytest_cache/
+out/
+data/raw/*real*
+data/results.csv
+.env
